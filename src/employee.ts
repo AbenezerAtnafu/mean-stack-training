@@ -4,4 +4,3 @@ export default class Employee {
     console.log("Retiring on " + date);
   }
 }
-
