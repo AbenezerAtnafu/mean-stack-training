@@ -1,0 +1,39 @@
+<p>{{ title }}</p>
+
+<!-- for of, for in,  -->
+
+<h1 *ngFor="let course of courses">
+  {{ course.title }}
+  <span [ngClass]="{ 'bg-red light': course.isPaid }" *ngIf="course.isPaid">
+    - Paid</span
+  >
+  <span [ngClass]="{ 'bg-green bold': !course.isPaid }" *ngIf="!course.isPaid">
+    - Free</span
+  >
+</h1>
+
+<div class="flex">
+  <div class="flex-1 bg-red">Column one</div>
+  <div class="flex-1 bg-green">Column two</div>
+</div>
+
+<img [src]="imgSrc" />
+
+<input type="text" placeholder="Course name" [(ngModel)]="newCourseName" />
+<input type="text" placeholder="Is paid" [(ngModel)]="isPaid" />
+
+<button type="button" (click)="createNewCourse(courseName.value)">
+  Create
+</button>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Course Name</mat-label>
+    <input
+      #courseName
+      matInput
+      placeholder="Course Name"
+      [(ngModel)]="newCourseName"
+    />
+  </mat-form-field>
+</form>
