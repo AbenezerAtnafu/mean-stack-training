@@ -4,5 +4,3 @@ export default class Employee {
     console.log("Retiring on " + date);
   }
 }
-
-console.log("to check git workflow");
